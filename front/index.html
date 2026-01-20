@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municípios</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+
+    <h1>Municípios (API)</h1>
+
+    <button id="btn">Carregar municípios</button>
+
+    <h2>Novo Município</h2>
+
+    <div class="form">
+        <input type="text" id="campoMunicipio" placeholder="Nome do município">
+        <input type="text" id="campoUF" placeholder="UF (ex: RS)">
+        <input type="text" id="campoCaracteristica" placeholder="Característica">
+        <button id="btnSalvar">Salvar</button>
+    </div>
+
+    <h2>Lista de Municípios</h2>
+
+    <!-- Lista dinâmica -->
+    <div id="listagem" class="container"></div>
+
+    <!-- Loader opcional -->
+    <div id="loader" class="loader">Carregando...</div>
+
+    <!-- MODAL -->
+    <div id="modalEditar" class="modal">
+        <div class="modal-conteudo">
+            <h3>Editar Município</h3>
+
+            <input type="hidden" id="editId">
+
+            <label>Nome</label>
+            <input type="text" id="editNome">
+
+            <label>UF</label>
+            <input type="text" id="editUF">
+
+            <label>Característica</label>
+            <input type="text" id="editCaract">
+
+            <div class="modal-botoes">
+                <button id="btnSalvarEdicao">Salvar Alterações</button>
+                <button onclick="fecharModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
